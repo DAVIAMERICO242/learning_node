@@ -1,0 +1,1 @@
+res.redirect('/') reridiciona para o endpoint '/'

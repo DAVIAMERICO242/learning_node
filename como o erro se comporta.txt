@@ -1,0 +1,1 @@
+objeto.metodo((err)=>{if (err)}), se nao for achado erro err sera undefined mesmo eu recebendo ele na arrow function

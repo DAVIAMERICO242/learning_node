@@ -1,0 +1,15 @@
+<% %> inicia uma declaração js dentro do html
+
+<%= x %> IMPRIME o valor de uma variavel node dentro do html, tenho que fechar o state 
+<% %> para usar isso
+
+uma variavel do node nao é acessivel diretamente de <% %>
+
+<%
+for (let x in vector) {
+     %><div> <%= x %> </div><%, para o x ser echado (echo) precisa do %=
+    
+}
+%>
+
+o console log é no backend

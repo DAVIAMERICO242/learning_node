@@ -1,0 +1,2 @@
+req: acessar o que o usuario envia
+res: manuseiar a saida 

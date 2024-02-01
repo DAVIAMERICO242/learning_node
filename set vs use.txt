@@ -1,0 +1,3 @@
+app.use define uma configuração global de middleware
+
+app.set define uma propriedade do app que pode ser retrievada futuramente

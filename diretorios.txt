@@ -1,0 +1,1 @@
+./subdir referencia um subdir do diretorio atual

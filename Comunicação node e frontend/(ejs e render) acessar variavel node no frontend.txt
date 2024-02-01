@@ -1,0 +1,24 @@
+//O HTML DEVE TER O FORMADO .ejs E DENTRO DE UMA PASTA CHAMADA VIEWS
+
+
+npm install express ejs
+const express = require('express');
+const app = express();
+
+// Atribui o metodo render ao app
+app.set('view engine', 'ejs');
+
+//////
+app.get('/', (req, res) => {
+    // Renderizando a view 'index.ejs'
+    var title = "oi"
+    res.render('index', { title});// manda a variable title para o html
+});
+
+
+////exibir no html
+
+<title><%= title %></title>
+
+para mudar o diretorio de views basta app.set('views', './src/views/');
+

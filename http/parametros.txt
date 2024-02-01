@@ -1,0 +1,3 @@
+app.get('/login/:id', (req,res)=>{ //torna o parametro obrigatorio
+    res.send(req.params.id)
+})

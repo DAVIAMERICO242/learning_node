@@ -1,0 +1,43 @@
+//CONFIGURAÇÃO NECESSARIA
+
+const connect_front_end = require('body-parser')
+
+app.use(connect_front_end.urlencoded({ extended: true }));
+app.use(connect_front_end.json()); //passar para json ainda no frontend
+
+
+//COMO FUNCIONA
+
+***Pela forma tradicional
+
+     <form action="/test_post" method="POST">
+        <label for="generic">Input generico</label>
+        <input type="text" name="generic" id="generic_input">
+        <button type ="submit" class="submeter">Submeter</button>
+     </form>
+
+app.post('/test_post', (req,res)=>{
+    console.log(req.body.generic)
+    res.redirect('/')
+})
+
+
+***Jquery ajax
+app.post('/test_post', (req,res)=>{
+    console.log(req.body.nome)
+    res.send('oi')//PRECISA DISSO SE NAO E CARREGAMENTO INFINITO
+})
+
+req.body vai conter todos os dados enviados, os atributos desses dados sao os names
+dos inputs em uma form ou os atributos do json passado pelo ajax data do jquery
+
+        $(document).ready(function(){
+            $('.submeter').on('click', function(){
+                $.ajax({
+                    method: "POST",
+                    url: "/test_post",
+                    contentType: 'application/json',
+                    data: JSON.stringify({nome:$('#generic_input').val()})
+                })
+        })
+        })

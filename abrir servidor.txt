@@ -1,0 +1,11 @@
+var express = require("express")
+var app = express()
+const PORT = 8081
+
+app.get('/', function(req,res){//req e res são objetos abstratos
+    res.send('Hello world')//html unico, posso usar render tb, declaração de send é unica
+})
+
+app.listen(PORT, function(){
+    console.log(`Servidor rodando na porta ${PORT}`);
+})

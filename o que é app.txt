@@ -1,0 +1,1 @@
+é um objeto abstrado que gerencia rotas

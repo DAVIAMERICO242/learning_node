@@ -1,0 +1,5 @@
+const x = require('x') //assume que x esta em node_modules e assume express instalado no diretorio do projeto node
+const app = x();
+
+o modulo x sera gerenciado pelo objeto app
+

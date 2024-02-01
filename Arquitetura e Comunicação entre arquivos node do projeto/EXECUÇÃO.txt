@@ -1,0 +1,1 @@
+os arquivos importados no servidor executado são executados assim que importados
