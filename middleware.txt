@@ -1,0 +1,15 @@
+const authMiddleware = async (req, res, next) => {//autorização login
+  if (req.session.name) {
+      // Usuário autenticado, permitir que a solicitação prossiga
+      console.log('ANYYY')
+      next();
+  } else {
+      // Usuário não autenticado, redirecionar para a página de login
+      console.log('ANYYY')
+      res.send('Não Autorizado');
+  }
+};
+
+app.get('/',authMiddleware, ()=>{})
+
+a função nao vai ser executada se o middleware nao deixar
